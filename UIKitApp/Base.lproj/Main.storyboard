@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIKitApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qv-yD-bwj">
+                                <rect key="frame" x="63" y="292" width="288" height="550"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="212" id="8O5-Ur-Mqm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="288" id="Iop-Of-jmT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбери время года" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yt-F5-bch">
+                                <rect key="frame" x="131.5" y="103" width="151" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="151" id="Isr-36-3IQ"/>
+                                    <constraint firstAttribute="height" constant="36" id="lAT-qG-XCa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="46K-8Z-N3Z">
+                                <rect key="frame" x="65" y="207" width="284" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="284" id="Vbd-f8-G9b"/>
+                                    <constraint firstAttribute="height" constant="31" id="gbD-33-3at"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Зима"/>
+                                    <segment title="Весна"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeSegment" destination="BYZ-38-t0r" eventType="valueChanged" id="YSs-yb-IN1"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.95433133840560913" green="0.81801766157150269" blue="0.82406145334243774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Qv-yD-bwj" firstAttribute="centerX" secondItem="8yt-F5-bch" secondAttribute="centerX" id="1u7-xV-5HK"/>
+                            <constraint firstItem="8yt-F5-bch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="6Eo-RQ-IqB"/>
+                            <constraint firstItem="46K-8Z-N3Z" firstAttribute="centerX" secondItem="8yt-F5-bch" secondAttribute="centerX" id="FBx-kG-b40"/>
+                            <constraint firstItem="8yt-F5-bch" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HkB-6E-RUH"/>
+                            <constraint firstItem="6Qv-yD-bwj" firstAttribute="top" secondItem="46K-8Z-N3Z" secondAttribute="bottom" constant="54" id="ran-vp-IJJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Qv-yD-bwj" secondAttribute="bottom" constant="20" id="s8b-Yg-Kz2"/>
+                            <constraint firstItem="46K-8Z-N3Z" firstAttribute="top" secondItem="8yt-F5-bch" secondAttribute="bottom" constant="68" id="seV-wP-nrj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="6Qv-yD-bwj" id="9Fa-Br-YsW"/>
+                        <outlet property="segmentedControl" destination="46K-8Z-N3Z" id="vaC-l4-i0G"/>
+                        <outlet property="upLabel" destination="8yt-F5-bch" id="joi-up-4kO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="77.445652173913047"/>
+        </scene>
+    </scenes>
+</document>
